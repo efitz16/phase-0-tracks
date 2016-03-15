@@ -12,3 +12,12 @@ section#contact-info p {
 .list {
 	font-size: .8em;
 }
+
+ul:hover {
+ background-color: blue;  
+}
+
+/* below is an example of selecting the child element of another element */
+.featured {
+ color: purple;
+}
