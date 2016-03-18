@@ -13,21 +13,27 @@
 		<main>
 			<p>Here are some news articles of the day, March 17, 2016.</p>
 
-			<p>
-				<table border =1>
+				<p><table border =1>
 					<tr>
-						<th>
-							
-						</th>
-						<th>
-							
-						</th>
-						<th>
-							
-						</th>
-					</tr>					
-				</table>
-			</p>
+						<th>Header 1</th>
+						<th>Header 2</th>
+						<th>Header 3</th>
+					</tr>
+					<tr>
+						<td rowspan="2">Cell 1</td>
+						<td>Cell 1</td>
+						<td>Cell 2</td>
+					</tr>
+					<tr>
+						<td>A</td>
+						<td>B</td>
+					</tr>
+					<tr>
+						<td>C</td>
+						<td>D</td>
+						<td>E</td>
+					</tr>
+				</table></p>
 		
 			<p>(This space to test nav elements--see if page jumps.)</p>
 		
@@ -82,25 +88,26 @@
 		
 		</main>
 		<article>
+			<h3>Topics</h3>
 			<section id="holiday">
 				<header>
-					<p>St. Patrick's Day</p>
-					<p>Published: <time pubdate="pubdate">2016-03-18</time></p>
+					<h4>St. Patrick's Day</h4>
+					<p>Published: <time>2016-03-18</time></p>
 				</header>
 				<p>
-					Today we celebrated St. Patrick's Day, a feast day that focuses on Irish heritage.
+					Yesterday we celebrated St. Patrick's Day, a feast day that focuses on Irish heritage.
 				</p>
 			</section>
 			<section id="weather">
 				<header>
-					Weather
-					<p>Published: <time pubdate="pubdate">2016-03-18</time></p>
+					<h4>Weather</h4>
+					<p>Published: <time>2016-03-18</time></p>
 				</header>
 				<p>
 					The weather for March 17, 2016 in New York city was mild, low-60s, and occasionally overcast 	with 	a 	slight change of rain.
 				</p>
 				<aside>
-					<h4>Warning!</h4>
+					<h5>Warning!</h5>
 					<p>You may need an umbrella or jacket.</p>
 				</aside>
 			</section>
@@ -108,6 +115,26 @@
 		<footer>
 			<p>Weather information from <a href="https://weather.com/">Weather.com</a></p>
 			<p>Contact: <a href="mailto:elizabethfitzpatrick16@gmail.com">Elizabeth Fitzpatrick</a></p>
+			<!-- Release 4: Reflect
+			* Purpose of HTML semantic tags? Which ones do you see as the most useful?
+
+			Semantic tags are helpful for both computers and users, as they tell the computer what's important and the user what group this text belongs under. They are also helpful for CSS, as they allow more specific targeting of what to edit with CSS.
+
+			I don't know if I persoanally find a certain tag useful, although I have to admit that tags such as <p>, <th>, <table>, and <tr> (tags that give ostensible aesthetic design) are useful becuase, even though HTML tags give semantic meaning, it is sometimes hard to visualize what these tags are doing. These tags separate elements on the page when it's loaded in the browser, making the HTML easier to work with. I find the division tags to be useful too when working with CSS, because they, with classes and id's, allow you to target specific parts of the page.
+
+			* What is the order the browser uses to display elements on a page?
+
+			When using only HTML, there does seem to be some correlation between the order that the HTML is written in and the order that it's displayed on the page (for example, the nav tag in this document comes before the main, article, and footer tags, and when this page is loaded in a browser, the text under those elements is displayed in that order, with nav first, then main, then article, etc.). However, CSS can be used to manipulate these elements into a different order from the one strictly given by an HTML document.
+
+			* What did you learn about Sublime in this challenge? Do you think you'll create more handy snippets at a later date?
+
+			I definitely learned more about snippets, and I will definitely create and use snippets in the future. I will have to explore the different snippets, though, tofind out what I can use.
+
+			I also learned how to create a navigation bar, and how id's (which I previously only used to link HTML and CSS) can be used to link different HTML elements.
+
+			* What concept in this challenge was most difficult for you? How can your understanding of this concept?
+
+			Probably the most difficult concept was figuring out why there needed to be so many different tags that seemingly all seem to do the same thing (namely: article, aside, section). I know they all have different semantic meanings; I think using CSS will perhaps help me to understand what all these different tags can contribute.-->
 		</footer>
 	</body>
 </html>
