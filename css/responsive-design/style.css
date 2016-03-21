@@ -62,7 +62,7 @@ order to style it.*/
   }
 }*/
 
-/*@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   #efitz h1, figure, p, blockquote, cite, ol, figcaption {
   min-width: 0px;
   vertical-align: baseline;
@@ -75,4 +75,4 @@ order to style it.*/
   display: inline;
   min-width: 0px;
   }
-}*/
+}
