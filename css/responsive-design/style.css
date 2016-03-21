@@ -63,16 +63,13 @@ order to style it.*/
 }*/
 
 @media screen and (max-width: 500px) {
-  #efitz h1, figure, p, blockquote, cite, ol, figcaption {
-  min-width: 0px;
-  vertical-align: baseline;
-  display: inline;
+  #external-links {
+    font-size: 4em;
   }
+}
 
-
-  #external-links h1, ul {
-  vertical-align: baseline;
-  display: inline;
-  min-width: 0px;
+@media screen and (max-width: 500px) {
+  #efitz p {
+    color: red;
   }
 }
