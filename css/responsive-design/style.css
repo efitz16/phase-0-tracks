@@ -32,7 +32,7 @@ figcaption {
 }
 
 body {
-  max-width: 960px;
+  width: 960px;
 }
 
 #external-links {
