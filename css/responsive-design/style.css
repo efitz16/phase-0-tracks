@@ -55,3 +55,24 @@ order to style it.*/
   padding-left: 20px;
   min-width: 200px;
 }
+
+/*@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
+
+/*@media screen and (max-width: 500px) {
+  #efitz h1, figure, p, blockquote, cite, ol, figcaption {
+  min-width: 0px;
+  vertical-align: baseline;
+  display: inline;
+  }
+
+
+  #external-links h1, ul {
+  vertical-align: baseline;
+  display: inline;
+  min-width: 0px;
+  }
+}*/
