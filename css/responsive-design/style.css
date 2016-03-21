@@ -32,13 +32,15 @@ figcaption {
 }
 
 body {
-  width: 960px;
+  max-width: 960px;
 }
 
 #external-links {
-  width: 200px;
+  width: 10%;
   vertical-align: top;
   display: inline-block;
+  padding-right: 20px;
+  min-width: 100px;
 }
 
 /*For some reason, whenever I type "main," CSS 
@@ -47,7 +49,9 @@ Thus, I had to give the main tag an id--efitz--in
 order to style it.*/
 
 #efitz {
-  width: 756px;
+  width: 70%;
   vertical-align: top;
   display: inline-block;
+  padding-left: 20px;
+  min-width: 200px;
 }
