@@ -30,3 +30,46 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+body {
+  max-width: 960px;
+}
+
+#external-links {
+  width: 10%;
+  vertical-align: top;
+  display: inline-block;
+  padding-right: 20px;
+  min-width: 100px;
+}
+
+/*For some reason, whenever I type "main," CSS 
+doesn't read the command and refuses to turn pink.
+Thus, I had to give the main tag an id--efitz--in 
+order to style it.*/
+
+#efitz {
+  width: 70%;
+  vertical-align: top;
+  display: inline-block;
+  padding-left: 20px;
+  min-width: 200px;
+}
+
+/*@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
+
+@media screen and (max-width: 500px) {
+  #external-links {
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #efitz p {
+    color: red;
+  }
+}
