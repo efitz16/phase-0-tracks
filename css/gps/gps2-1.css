@@ -1,15 +1,31 @@
 .column-1 {
-  width: 50%;
+  width: 45%;
   float: left;
+  background-color: green;
+  padding: 15px;
 } 
 .column-2 {
+  width: 45%;
   float: right;
-  
+  background-color: lime;
+  padding: 15px;
+  padding-bottom: 73px;
+  margin-left: 6px;
 }
 footer {
   width: 100%;
   float: left;
-  padding-top: 50px;
+  margin-top: 12px;
+  background-color: blue;
+  padding: 15px;
 }
 
+header {
+  background-color: blue;
+  padding: 4px;
+  margin-bottom: 10px;
+}
 
+body {
+  font-family: Helvetica;
+}
