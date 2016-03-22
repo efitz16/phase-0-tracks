@@ -1,3 +1,17 @@
+.column-1 {
+  width: 50%;
+  float: left;
+} 
+.column-2 {
+  float: right;
+  
+}
+footer {
+  width: 100%;
+  float: left;
+  padding-top: 50px;
+}
+
 body {
-	background-color: blue;
+  font-family: "Helvetica" serif;
 }
