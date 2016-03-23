@@ -1,3 +1,5 @@
+Release 0: Equip Your New Robot
+
 - Locate the up/down buttons.
 
 - Walk up to the up/down buttons.
@@ -20,3 +22,27 @@
 - While elevator is not at floor you want to be on, stay inside elevator
 
 - When elevator is at the same floor as the floor you wish to be on, leave elevator
+
+Release 1: Find a Real-Life Algorithm
+
+Washing your hair:
+
+1. Wet hair
+
+2. Count = 0
+
+3. Deposit one pump of shampoo into your hand and lather it into your hair.
+
+4. Wash shampoo out of hair.
+
+5. Count = count + 1
+	while count < 2
+		repeat steps 3-4
+
+6. Deposit one handful of conditioner into hair
+
+7. Work conditioner from ends to roots of hair
+
+8. Wait 5 minutes
+
+9. Wash conditioner out of hair
