@@ -1,0 +1,22 @@
+- Locate the up/down buttons.
+
+- Walk up to the up/down buttons.
+	If the floor you wish to go to is higher than the floor you are currently on
+		press the up button
+	else
+		press the down button
+
+- Walk approximately 2.5 feet away from the up/down buttons.
+
+- If there are signs indicating which direction the elevator is going in
+		when an elevator door opens AND there is an arrow indicating it is going in the same direction you wish, get in the elevator
+	else
+		when an elevator door opens, get in the elevator
+
+- Locate a group of buttons with every floor number on them on one of the walls inside the elevator
+
+- Press the button that has the same number as the floor you wish to got to
+
+- While elevator is not at floor you want to be on, stay inside elevator
+
+- When elevator is at the same floor as the floor you wish to be on, leave elevator
