@@ -26,6 +26,27 @@ until count == num_of_employees
 	date_of_birth = gets.chomp
 	
 	date_of_birth = date_of_birth.to_i
+
+	allergie_s = nil
+
+	loop do
+		puts "Do you have any allergies? Press return after entering each, and type 'fin' when you're finished listing them."
+		allergie_s = gets.chomp
+		break if allergie_s == "sunshine" || allergie_s == "fin"
+	end
+
+	if allergie_s == "sunshine"
+		puts "--------------------------------------"
+	
+		puts "Name: #{name}"
+		
+		puts "Age (by end of 2016): #{age}"
+		
+		puts "Year of birth: #{date_of_birth}"
+			
+		abort("WARNING: Probably a vampire
+--------------------------------------")
+	end
 	
 	garlic_bread = nil
 	
