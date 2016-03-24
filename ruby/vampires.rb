@@ -27,24 +27,10 @@ loop do
 	puts "Invalid input. Please enter 'y' or 'n'"
 end
 
-willing = nil
-
 if garlic_bread == "y"
 	garlic_bread = true
 elsif garlic_bread == "n"
 	garlic_bread = false
-	loop do
-		puts "Are you willing to eat garlic bread? (y/n)?"
-		willing = gets.chomp
-		break if willing == "y" || willing == "n"
-		puts "Invalid input. Please enter 'y' or 'n'"
-	end
-end
-
-if willing == "y"
-	willing = true
-elsif willing == "n"
-	willing = false
 end
 
 health_insurance = nil
@@ -56,24 +42,10 @@ loop do
 	puts "Invalid input. Please enter 'y' or 'n'"
 end
 
-not_immortal = nil
-
 if health_insurance == "y"
 	health_insurance = true
 elsif health_insurance == "n"
 	health_insurance = false
-	loop do
-		puts "Are you at least willing to enroll or open to enrolling in the company’s health insurance? (y/n)?"
-		not_immortal = gets.chomp
-		break if not_immortal == "y" || not_immortal == "n"
-		puts "Invalid input. Please enter 'y' or 'n'"
-	end
-end
-
-if not_immortal == "y"
-	not_immortal = true
-elsif not_immortal == "n"
-	not_immortal = false
 end
 
 puts "--------------------------------------"
@@ -102,23 +74,12 @@ puts "Vampire?"
 
 if name == "Drake Cula" || name == "Tu Fang"
 	puts "Definitely a vampire."
-elsif (age == 2016-date_of_birth) && (garlic_bread || health_insurance) #=begin|| (willing || not_immortal))=end
+elsif (age == 2016-date_of_birth) && (garlic_bread || health_insurance)
 	puts "Probably not a vampire."
-elsif !(age == 2016-date_of_birth) && ( !garlic_bread || !health_insurance )
+elsif !(age == 2016-date_of_birth) && ( !garlic_bread && health_insurance )
 	puts "Probably a vampire."
-=begin
-elsif !(age == 2016-date_of_birth) && ( !willing || not_immortal )
-	puts "Probably not a vampire."
-elsif !(age == 2016-date_of_birth) && ( willing || !not_immortal )
-	puts "Probably not a vampire."
-=begin
-	
-end
-elsif !(age == 2016-date_of_birth) && !willing && (health_insurance || not_immortal)
+elsif !(age == 2016-date_of_birth) && ( garlic_bread && !health_insurance )
 	puts "Probably a vampire."
-elsif !(age == 2016-date_of_birth) && !not_immortal && (garlic_bread || willing)
-	puts "Probably a vampire."
-=end
 elsif !(age == 2016-date_of_birth) && !garlic_bread && !health_insurance
 	puts "Almost certainly a vampire."
 else 
