@@ -6,7 +6,7 @@ num_of_employees = num_of_employees.to_i
 
 count = 0
 
-until count == num_of_employees
+while count < num_of_employees
 	puts "What is your name?"
 	
 	name = gets.chomp
@@ -30,7 +30,7 @@ until count == num_of_employees
 	allergie_s = nil
 
 	loop do
-		puts "Do you have any allergies? Press return after entering each, and type 'fin' when you're finished listing them."
+		puts "Do you have any allergies? Press return after entering each, and enter 'fin' when you're finished listing them."
 		allergie_s = gets.chomp
 		break if allergie_s == "sunshine" || allergie_s == "fin"
 	end
@@ -45,7 +45,8 @@ until count == num_of_employees
 		puts "Year of birth: #{date_of_birth}"
 			
 		abort("WARNING: Probably a vampire
---------------------------------------")
+--------------------------------------
+Actually, never mind! What do these questions have to do with anything? Let's all be friends.")
 	end
 	
 	garlic_bread = nil
@@ -120,3 +121,5 @@ until count == num_of_employees
 
 	count += 1
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
