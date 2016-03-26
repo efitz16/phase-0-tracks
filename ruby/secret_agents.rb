@@ -66,7 +66,7 @@ puts "Would you like to encrypt or decrypt a password?"
 
 choice = gets.chomp
 
-puts "What's your password?"
+puts "What's your password? (NO SYMBOLS, only letters--lower and uppercase--and numbers)"
 
 password = gets.chomp
 
