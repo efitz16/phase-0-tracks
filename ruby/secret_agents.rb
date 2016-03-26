@@ -38,6 +38,9 @@ def decrypt(y)
 	while count < len
 		if y[count] == "!"
 			decrypted_code[count] = " "
+		elsif y[count] == y[count].upcase
+			i = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".index(y[count])
+			decrypted_code = decrypted_code + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[i-1]
 		else
 
 			i = "abcdefghijklmnopqrstuvwxyz".index(y[count])
@@ -50,6 +53,7 @@ def decrypt(y)
 	
 end
 
+#decrypt(encrypt("The duck flies at midnight"))
 
 #decrypt("bz!d")
 
