@@ -38,6 +38,9 @@ def decrypt(y)
 	while count < len
 		if y[count] == "!"
 			decrypted_code[count] = " "
+		elsif y[count] == "0" || y[count] == "1" || y[count] == "2" || y[count] == "3" || y[count] == "4" || y[count] == "5" || y[count] == "6" || y[count] == "7" || y[count] == "8" || y[count] == "9"
+			i = "0123456789".index(y[count])
+			decrypted_code = decrypted_code + "0123456789"[i-1]
 		elsif y[count] == y[count].upcase
 			i = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".index(y[count])
 			decrypted_code = decrypted_code + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[i-1]
@@ -63,7 +66,7 @@ puts "Would you like to encrypt or decrypt a password?"
 
 choice = gets.chomp
 
-puts "What's your password?"
+puts "What's your password? (NO SYMBOLS, only letters--lower and uppercase--and numbers)"
 
 password = gets.chomp
 
