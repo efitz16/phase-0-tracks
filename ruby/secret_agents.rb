@@ -25,7 +25,7 @@ def encrypt(a)
 
 end
 
-encrypt("abc")
+#encrypt("abc")
 
 def decrypt(y)
 
@@ -51,4 +51,22 @@ def decrypt(y)
 end
 
 
-decrypt("bz!d")
+#decrypt("bz!d")
+
+#interface:
+
+puts "Would you like to encrypt or decrypt a password?"
+
+choice = gets.chomp
+
+puts "What's your password?"
+
+password = gets.chomp
+
+case choice
+
+when "encrypt"
+	encrypt(password)
+when "decrypt"
+	decrypt(password)
+end
