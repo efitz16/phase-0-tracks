@@ -36,10 +36,13 @@ def decrypt(y)
 	decrypted_code = ""
 
 	while count < len
-		i = "abcdefghijklmnopqrstuvwxyz".index(y[count])
-		
-		decrypted_code = decrypted_code + "abcdefghijklmnopqrstuvwxyz"[i-1]
-		
+		if y[count] == "!"
+			decrypted_code[count] = " "
+		else
+
+			i = "abcdefghijklmnopqrstuvwxyz".index(y[count])
+			decrypted_code = decrypted_code + "abcdefghijklmnopqrstuvwxyz"[i-1]
+		end
 		count += 1
 	end
 	
@@ -47,4 +50,5 @@ def decrypt(y)
 	
 end
 
-decrypt("bcd")
+
+decrypt("bz!d")
