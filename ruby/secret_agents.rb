@@ -21,3 +21,25 @@ p a
 end
 
 encrypt("abc")
+
+def decrypt(y)
+
+	len = y.length
+
+	count = 0
+
+	decrypted_code = ""
+
+	while count < len
+		i = "abcdefghijklmnopqrstuvwxyz".index(y[count])
+		
+		decrypted_code = decrypted_code + "abcdefghijklmnopqrstuvwxyz"[i-1]
+		
+		count += 1
+	end
+	
+	p decrypted_code
+	
+end
+
+decrypt("bcd")
