@@ -5,7 +5,12 @@ def encrypt(a)
   index = 0
 
   while index < len
-    a = a + a[index].next
+  	if a[index] == "z"
+  		a[-len] = "a"
+  		a = a + a[-len]
+  	else
+		a = a + a[index].next
+	end
     index += 1
   end
   
@@ -16,7 +21,7 @@ def encrypt(a)
     i -= 1
   end
   
-p a
+  p a
 
 end
 
