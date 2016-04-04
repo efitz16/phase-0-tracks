@@ -1,6 +1,10 @@
 =begin
 pseudocode
 propt ("puts "Please enter..."")
+Convert: :symbol.to_s or .to_i (what about combos like address or email?)
+print hash (p or puts client)
+update key
+
 
 =end
 
@@ -10,9 +14,13 @@ puts "What's the client's name?"
 
 client[:name] = gets.chomp
 
+:name.to_s
+
 puts "Address:"
 
 client[:address] = gets.chomp
+
+
 
 puts "Email:"
 
@@ -46,4 +54,4 @@ puts "Dry-clean only materials:"
 
 client[:dry_clean] = gets.chomp
 
-puts applicant
+p client
