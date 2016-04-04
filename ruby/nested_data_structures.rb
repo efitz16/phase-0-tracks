@@ -36,3 +36,12 @@ puts
 puts "This is the driver of the gray #{highway[:gray_car][:model_type]}:"
 
 p highway[:gray_car][:passengers][0]
+
+puts
+
+puts "Someone just got into the gray #{highway[:gray_car][:model_type]}."
+puts "This was the passenger list before:"
+p highway[:gray_car][:passengers]
+puts "Now the passenger list is:"
+highway[:gray_car][:passengers].push("woman")
+p highway[:gray_car][:passengers]
