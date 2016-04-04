@@ -24,6 +24,10 @@ count = 0
 
 spy_name = ""
 
+j = name.index(" ")
+
+name.downcase!
+
 while count < name.length
 	if name[count] == "a" || name[count] == "e" || name[count] == "i" || name[count] == "o" || name[count] == "u"
 		i = "aeiou".index(name[count])
@@ -36,5 +40,8 @@ while count < name.length
 	end
 	count += 1
 end
+
+spy_name.capitalize!
+spy_name[j+1] = spy_name[j+1].upcase!
 
 p spy_name
