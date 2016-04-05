@@ -20,6 +20,10 @@ pseudocode
   
 =end
 
+# !! For release 3 in the test, 'Ice cream' cannot be entered in the first string, 
+# !! but it can be entered as an add-in item. So, for example, if you enter items one by one (press enter after each item), 
+# !! as the release kind of shows you doing with the test cases, "ice cream" works perfectly fine 
+
 def create_list
   
   list = {}
@@ -27,13 +31,12 @@ def create_list
   puts "Please enter items for list:"
   
   items = gets.chomp
-  #quantity = gets.chomp
 
   items = items.split(' ')
   
   items.each do |key| 
     
-    list[key.to_sym] = 1
+    list[key.to_sym] = "1"
     
   end
   
@@ -44,52 +47,84 @@ end
 def add_item(hash)
   
   the_hash = hash
+  
+  puts "This is your list:"
+  puts "#{the_hash}"
+  
  loop do 
-  puts "To exit type fin."
-    
   puts "Add an item:"
+  puts "(To exit type 'fin')"
   
   new_item = gets.chomp
-   break if new_item == "fin"
+  break if new_item == "fin"
   
-  puts "How much?"
+  puts "Amount?"
   
   amount = gets.chomp
+  break if amount == "fin"
   
   the_hash[new_item.to_sym] = amount
-  
-  p the_hash
-  
-  the_hash
  end  
+ 
+ the_hash
+ 
 end
 
 def remove_item(new_hash)
   
   hash = new_hash
   
+  puts "This is your list:"
+  puts "#{hash}"
+  
   puts "Would you like to delete anything?"
+  
+  puts "Please enter 'no' or the item:"
   
   delete_item = gets.chomp
   
-  hash = hash.delete_if {|key, value| key == delete_item.to_sym}
-  
- p hash
-  
+  if delete_item == "no"
   hash
+  else
+    hash = hash.delete_if {|key, value| key == delete_item.to_sym}
+    hash
+  end
   
 end
 
 def update_quantity(a_hash)
   hash = a_hash
-  puts "would you like to change the amount of anything?"
-  item = gets.chomp
-  amount = gets.chomp
-  hash[item.to_sym] = amount
-  hash 
   
+  puts "This is your list:"
+  puts "#{hash}"
+
+  puts "Would you like to change the amount of anything?"
+  
+  puts "Please enter 'no' or the item:"
+
+  item = gets.chomp
+  
+    if item == "no"
+      hash
+    else
+    puts "Please enter the new amount:"
+
+    amount = gets.chomp
+
+      hash[item.to_sym] = amount
+
+      hash
+    end
 end
 
+def print_method(a_hash)
+  puts "Your items are:"
+  
+  puts #line break
 
+  a_hash.each do |key, value|
+    puts "#{key}: #{value}"
+  end
+end
 
-update_quantity(remove_item(add_item(create_list)))
+print_method(update_quantity(remove_item(add_item(create_list))))
