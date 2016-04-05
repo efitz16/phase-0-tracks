@@ -3,20 +3,36 @@
 pseudocode
 
 - method to create list
+  - input: string
   - list = hash?
   - item = key; quantity = value
   - make item into symbol
-  (focus on input & output)
+  - output: hash whose keys are items from string broken up, values are default to one
+  - break 
 - method add items to hash
-  - push to add items as symbols
-  - input: item & quantity
+  - accept create list method as argument
+    - input from other method: created hash with original items as keys & default value
+  - input from user item & quantity
+  - use IF/ELSE statement to ask user if wants to proceed with this step
+  - use LOOP method UNTIL stop signal entered
+  - output: updated hash with new items and quantities
 - method to remove item from list
-  - input: item want to remove
-  - output: hash w/out that item
+  - accept add items method as argument 
+    - input: hash so far
+  - input from user: items want to remove
+  - use IF/ELSE statement to ask user if wants to proceed with this step
+  - use special ruby method for deleting key & value using key as search
+  - output: updated hash w/ item removed
 - method to change quantites
-  - input: key whose quantity you want to change and new quantity
-  - output: updated list
+  - accept remove item method as argument
+    - input: hash so far
+  - input from user: key whose quantity you want to change and new quantity
+  - use IF/ELSE statement to ask user if wants to proceed with this step
+  - set amount to key, overriding old value
+  - output: updated list with updated quantity
 - print list
+  - accept completed hash as input
+  - print hash & format it nicely, i.e. print out full sentences, saying key is your item and value is the amount of that item
   
 =end
 
@@ -128,3 +144,33 @@ def print_method(a_hash)
 end
 
 print_method(update_quantity(remove_item(add_item(create_list))))
+
+=begin
+  
+What did you learn about pseudocode from working on this challenge?
+
+Honestly, I learned that I still don't really like pseudocoding that much, but that I should get used to it.
+
+What are the tradeoffs of using arrays and hashes for this challenge?
+
+Arrays and hashes can definitely make information easier to store and group, but it can be tricky to learn the syntax for creating, manipulating, and interacting with them
+
+What does a method return?
+
+In Ruby, a method returns the last evaluated expression.
+
+What kind of things can you pass into methods as arguments?
+
+Methods can accept all manner of data types (strings, integers, floats, etc.) and other methods.
+
+How can you pass information between methods?
+
+To pass information between methods, you can pass a method into another method as a parameter. Just be aware of what
+  the method being passed in returns and thus what the input into the method being called is.
+
+What concepts were solidified in this challenge, and what concepts are still confusing?
+
+In this challenge, I think I furthered my understanding of .each, as well as filling hashes. I also learned about methods calling 
+  other methods and double-checking your method input/outputs. I think I need a bit more practice on methods and methods-as-arguments.
+  
+= end
