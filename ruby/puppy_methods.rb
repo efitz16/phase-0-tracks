@@ -30,6 +30,23 @@ class Puppy
 
 end
 
+class Gymnast
+  def initialize
+    puts "Initializing new Gymnast instance..."
+  end
+  
+  def flip(int)
+    int.times do
+      puts "Did a flip"
+    end
+  end
+  
+  def jump(int)
+    puts "Jumped #{int} feet"
+  end
+end
+
+
 Rover = Puppy.new
 
 Rover.fetch("ball")
@@ -41,3 +58,13 @@ Rover.roll_over
 Rover.dog_years(5)
 
 Rover.sit
+
+i=0
+
+a=1
+
+while i<50
+  item_a = Gymnast.new
+  i += 1
+  a += 1
+end
