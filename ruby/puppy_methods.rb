@@ -59,12 +59,24 @@ Rover.dog_years(5)
 
 Rover.sit
 
-i=0
+i = 0
 
-a=1
+a = 1
 
-while i<50
+gym_tricks = []
+
+while i < 50
   item_a = Gymnast.new
+  gym_tricks.push(item_a)
   i += 1
   a += 1
 end
+
+# p gym_tricks debugging
+
+gym_tricks.each do |individual|
+  individual.flip(2)
+  individual.jump(4)
+end
+
+# p gym_tricks debugging
