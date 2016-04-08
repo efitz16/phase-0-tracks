@@ -16,12 +16,14 @@ class Santa
 	end
 end
 
-# now that initialize takes two arguments, need to update driver code
-Harry = Santa.new("male", "black")
+=begin
+initialize now takes two arguments; this driver code only works for release 0
+Harry = Santa.new
 
-Sam = Santa.new("none", "Native American")
+Sam = Santa.new
 
-Irene = Santa.new("female", "asian")
+Irene = Santa.new
+=end
 
 =begin
 # Example Release 1 gives:
@@ -46,3 +48,24 @@ end
 p santas
 =end
 
+santas = []
+
+i = 0
+
+a = 1
+
+while i < 2
+	SantaConMember_a = Santa.new("female", "Latina")
+	santas << SantaConMember_a
+	i += 1
+	a += 1
+end
+
+santas << Santa.new("bigender", "Indian")
+santas << Santa.new("female", "black")
+santas << Santa.new("male", "white")
+santas << Santa.new("genderfluid", "white")
+
+santas << Lisa = Santa.new("agender", "Latin@")
+
+p santas
