@@ -14,6 +14,24 @@ class Santa
 	def eat_milk_and_cookies(cookie_type)
 		puts "That was a good #{cookie_type}!"
 	end
+
+	def celebrate_birthday
+		@age = @age += 1
+	end
+
+	def get_mad_at(reindeer_meat)
+		@reindeer_ranking.delete(reindeer_meat)
+		@reindeer_ranking.push(reindeer_meat)
+		@reindeer_ranking
+	end
+
+	def gender
+		@gender
+	end
+	
+	def ethnicity
+		@ethnicity
+	end
 end
 
 =begin
@@ -67,5 +85,34 @@ santas << Santa.new("male", "white")
 santas << Santa.new("genderfluid", "white")
 
 santas << Lisa = Santa.new("agender", "Latin@")
+
+puts #line break
+
+puts "Whole array:"
+p santas
+
+puts
+
+puts "Lisa the santa:"
+p Lisa
+
+puts
+
+santas[2].celebrate_birthday
+santas[1].get_mad_at("Vixen")
+
+puts "The gender of santa[4]:"
+
+p santas[4].gender
+
+puts
+
+puts "The ethnicity of santa[0]:"
+
+p santas[0].ethnicity
+
+puts
+
+puts "The updated Santa array:"
 
 p santas
