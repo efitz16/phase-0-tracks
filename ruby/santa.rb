@@ -1,6 +1,6 @@
 class Santa
 	attr_reader :gender, :ethnicity
-	attr_accessor :favorite_color
+	attr_accessor :favorite_color, :age
 
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance..."
@@ -102,6 +102,8 @@ santas << Lisa = Santa.new("agender", "Latin@")
 
 santas[5].favorite_color = "green"
 
+santas[5].age = 7
+
 puts #line break
 
 puts "Whole array:"
@@ -130,5 +132,21 @@ p santas[0].ethnicity
 puts
 
 puts "The updated Santa array:"
+
+p santas
+
+puts
+
+puts "Now to make LOTS of santas..."
+
+# Work for Release 4 begins here, but I'm going to store them in the same santas array
+
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+120.times do 
+	santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+end
 
 p santas
