@@ -54,6 +54,7 @@ class Dress
 	end
 end
 
+=begin
 #driver code:
 new_dress = Dress.new("shift")
 new_dress.color = "green"
@@ -68,3 +69,82 @@ new_dress.embellish
 p new_dress.color
 p new_dress.length
 p new_dress.style
+=end
+
+dresses = []
+
+i = 0
+
+puts "Would you like to create a new dress(y/n)?"
+
+ans = gets.chomp
+
+until ans == "n"
+	puts "What style is the dress?"
+
+	style = gets.chomp
+
+	dress_i = Dress.new(style)
+
+	dresses << dress_i
+
+	puts "What color is it?"
+
+	the_color = gets.chomp
+
+	dress_i.color = the_color
+
+	puts "What's the length (in cm)?"
+
+	the_length = gets.chomp
+
+	dress_i.length = the_length
+
+	puts #line break
+
+	puts "Your dress style is #{dress_i.style} style,"
+	puts "your dress's color is #{dress_i.color},"
+	puts "and your dress's length is #{dress_i.length}."
+
+	puts
+
+	dress_i.wash(the_color)
+
+	puts
+
+	dress_i.swirl
+
+	puts
+
+	dress_i.embellish
+
+	puts
+
+	puts "Now, your dress style is #{dress_i.style},"
+	puts "your dress's color is #{dress_i.color},"
+	puts "and your dress's length is #{dress_i.length}."
+
+	i += 1
+
+	puts "Want to create another dress (y/n)?"
+
+	ans = gets.chomp
+end
+
+puts
+
+puts "Thanks!"
+
+puts
+
+puts "Your dresses are:"
+
+k = 0
+
+while k < dresses.length
+	puts "Dress #{k+1}:"
+	puts "Style: #{dresses[k].style}"
+	puts "Length: #{dresses[k].length}"
+	puts "Color: #{dresses[k].color}"
+	k += 1
+end
