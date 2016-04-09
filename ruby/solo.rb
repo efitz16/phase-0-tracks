@@ -40,7 +40,7 @@ class Dress
 			new_length = gets.chomp
 			@length = new_length
 			puts "The new length is:"
-			puts "#{length}"
+			puts "#{length} cm"
 		when "2"
 			puts "Its current color is #{color}."
 			puts "Please enter the color you wish to dye it:"
@@ -58,6 +58,13 @@ end
 new_dress = Dress.new("shift")
 new_dress.color = "green"
 new_dress.length = 3
+
+p new_dress.color
+p new_dress.length
+p new_dress.style
+
+new_dress.embellish
+
 p new_dress.color
 p new_dress.length
 p new_dress.style
