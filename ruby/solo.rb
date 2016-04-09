@@ -1,3 +1,32 @@
+=begin
+
+CLASS: dress
+
+STATE
+	-style: the style (shift, mini, handkerchief) of the dress
+	- color: sets the color of the dress
+	- length: length of dress in cm
+	
+BEHAVIOR
+	- initialize
+		- input: takes style as parameter--stle of dress not changeable and stays same throughout program
+		- note: when write attr_reader, attach style; attr_accessor takes color & length
+		- output:
+			- will set three attributes: style, color, and length
+			- prints out initializing statement
+	- wash
+		- input: takes dress color as argument
+		- prints out message saying dress was washed
+		- uses IF/ELSE to say if bleach used if dress color is white
+	- swirl
+		-output: prints out message saying dress was washed
+	- embellish
+		- asks user how wants tochange dress
+			- CASE if want to dye or change length
+		- alters color or length attributes of dress
+	
+=end
+
 class Dress
 	attr_reader :style
 	attr_accessor :color, :length
@@ -104,7 +133,7 @@ until ans == "n"
 
 	puts "Your dress style is #{dress_i.style} style,"
 	puts "your dress's color is #{dress_i.color},"
-	puts "and your dress's length is #{dress_i.length}."
+	puts "and your dress's length is #{dress_i.length} cm."
 
 	puts
 
@@ -120,9 +149,15 @@ until ans == "n"
 
 	puts
 
+	dress_i.swirl
+
+	puts
+
 	puts "Now, your dress style is #{dress_i.style},"
 	puts "your dress's color is #{dress_i.color},"
-	puts "and your dress's length is #{dress_i.length}."
+	puts "and your dress's length is #{dress_i.length} cm."
+
+	puts
 
 	i += 1
 
