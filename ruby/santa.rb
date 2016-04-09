@@ -1,6 +1,6 @@
 class Santa
 	attr_reader :gender, :ethnicity
-	attr_accessor
+	#attr_accessor :favorite_color
 
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance..."
@@ -8,6 +8,7 @@ class Santa
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
+		@favorite_color = "red"
 	end
 
 	def speak
@@ -26,6 +27,12 @@ class Santa
 		@reindeer_ranking.delete(reindeer_meat)
 		@reindeer_ranking.push(reindeer_meat)
 		@reindeer_ranking
+	end
+
+
+	#setter method:
+	def favorite_color=(new_fave_color)
+		@favorite_color = new_fave_color
 	end
 
 =begin
@@ -91,6 +98,8 @@ santas << Santa.new("male", "white")
 santas << Santa.new("genderfluid", "white")
 
 santas << Lisa = Santa.new("agender", "Latin@")
+
+santas[5].favorite_color = "green"
 
 puts #line break
 
