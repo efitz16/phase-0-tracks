@@ -1,6 +1,6 @@
 class Santa
 	attr_reader :gender, :ethnicity
-	#attr_accessor :favorite_color
+	attr_accessor :favorite_color
 
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance..."
@@ -29,11 +29,12 @@ class Santa
 		@reindeer_ranking
 	end
 
-
+=begin
 	#setter method:
 	def favorite_color=(new_fave_color)
 		@favorite_color = new_fave_color
 	end
+=end
 
 =begin
 Getter methods:
