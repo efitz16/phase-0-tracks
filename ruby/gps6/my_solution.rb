@@ -19,14 +19,14 @@ class VirusPredictor
 
 # Calls two methods which are private; thus virus_effects can be accessed outside class definition
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
   end
 
   private
 
 # Using IF/ELSE checks state's density, and thus predicts how many people will die (higher density equals more deaths) by multiplying population by density percentage ****
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -45,7 +45,7 @@ class VirusPredictor
   end
 
 # Using population density, predicts how quickly virus will spread across state
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
