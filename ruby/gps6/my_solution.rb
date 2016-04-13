@@ -1,7 +1,7 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [with: Craig].
+# We spent [2.5] hours on this challenge.
 
 # Calls file that's necessary to run this code 
 # and completes the program. Basically, it adds files together;
@@ -92,6 +92,27 @@ STATE_DATA.each do |key, value|
   the_state.virus_effects
 end
 
+=begin
+=======================================================================
+Reflection
 
-#=======================================================================
-# Reflection Section
+- What are the differences between the two different hash syntaxes shown in the state_data file?
+
+In the state_data file, we see two hash syntakes: one using a hash rocket (as between the state and its date), and another using a colon (as in the second hash, where the key is a symbol saying what the type of data is and the value is the numbers). The hash using the hash rocket syntax tells us that the key is a string and its value is itself a hash; inside this hash (which is itself a value), the keys are symbols and the values are integers and floats.
+
+- What does require_relative do? How is it different from require?
+
+The line require_relative includes code from the selected file in the current file, effectively combining them. It differs from require because require_relative refers to a relative path (the current working directory), i.e. allowing you to load a file realtive to the file with the require_relative statement. By contrast, relative works along an absolute path and refers to a certain directory.
+
+- What are some ways to iterate through a hash?
+
+Some ways to iterate through a has include an each statement (using key and value in the block statement), while statements, until statements, and loop do loops.
+
+- When refactoring virus_effects, what stood out to you about the variables, if anything?
+
+In the original virus_effects method, instance varaibles were being passed as arguments into two instance methods, which was unnecessary; because instance variables can be accessed anywherein the class definition, it is accessable in the instance methods, so there is no need to pass them in.
+
+- What concept did you most solidify in this challenge?
+
+This challenge most solidified the concept that I need to study more and review the .each method syntax, especially as it relates to hashes. 
+=end
