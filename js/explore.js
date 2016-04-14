@@ -9,10 +9,12 @@ Pseudocode
 		- loop backwards: count equals parameter's length minus 1; until count less than or equal to 0; subtract 1 from count
 		- add index of parameter to new string
 	- return new string
-- print reverse calling each variable string
+- Store result of reversed string in variable
 - IF/ELSE:
-	- IF a variable equals the reverse of the variable reversed
-		- print the variable
+	- IF a original string equals the reverse of it reversed
+		- print yes statement
+		- print the reverse method with the original variable as an argument
+		- print the reversed (1x) variable
 	- ELSE
 		- print sorry message
 */
@@ -33,12 +35,33 @@ function reverse(theString) {
 	return newString;
 }
 
-console.log(reverse(aString));
-console.log(reverse(stringTwo));
-console.log(reverse(stringThree));
+reverseA = reverse(aString);
+reverseB = reverse(stringTwo);
+reverseC = reverse(stringThree);
 
-if (aString == reverse(reverse(aString))) {
-	console.log(aString);
+console.log("Does the first example work?");
+if (aString == reverse(reverseA)) {
+	console.log("Yes:");
+	console.log(reverse(aString));
+	console.log(reverseA);
+} else {
+	console.log("Sorry");
+}
+
+console.log("Does the second example work?");
+if (stringTwo == reverse(reverseB)) {
+	console.log("Yes:");
+	console.log(reverse(stringTwo));
+	console.log(reverseB);
+} else {
+	console.log("Sorry");
+}
+
+console.log("Does the third example work?");
+if (stringThree == reverse(reverseC)) {
+	console.log("Yes:");
+	console.log(reverse(stringThree));
+	console.log(reverseC);
 } else {
 	console.log("Sorry");
 }
