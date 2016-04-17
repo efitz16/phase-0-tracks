@@ -9,7 +9,7 @@ names.push("Steve");
 var horses = {};
 
 if (names.length == colors.length) {
-  for(var i = 0; i <names.length; i++) {
+  for (var i = 0; i <names.length; i++) {
   	horses[names[i]] = colors[i];
   }
 } else {
