@@ -17,6 +17,8 @@
 - driver code calling function with declared arrays as arguments
 */
 
+console.log("Release 0:");
+
 var arr1 = ["long phrase","longest phrase","longer phrase"];
 
 var arr2 = ["the cat in the hat", "one fish two first three fish blue fish", "green eggs and ham", "Sam I am"];
@@ -67,6 +69,8 @@ console.log(longestPhrase(arr3));
 - call function with declared objects as arguments
 */
 
+console.log("Release 1:");
+
 var str = {name: "Steven", age: 54};
 
 var str2 = {name: "Tamir", age: 54};
@@ -105,6 +109,28 @@ function isMatch(obj1, obj2) {
 
 console.log(isMatch(str, str2));
 console.log(isMatch(objH, objG));
+
+// Release 2
+
+/*
+Pseudocode: 
+- function that finds a random array--one paramter that takes a length of how long you want your array to be
+	- declare empty array
+	- declare string that's alphabet
+	- FOR each count (start at zero) while it's less than desired length (parameter)
+		- word empty
+		- FOR second count as long as less than randomly generated length btwn 1 and 10
+			- word equals first word plus random letter of alphabet (find by choosing random index of alphabet string)
+		- push word into array
+	- return array with random words
+
+- FOR a count so long as less than 10 (do 10 times)
+	- declare empty array
+	- array length is randomly chosen--at least 1, at most 11
+	- pass array into function
+	- print array
+	- pass array into Release 0 longest phrase function
+*/
 
 
 
