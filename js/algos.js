@@ -67,7 +67,44 @@ console.log(longestPhrase(arr3));
 - call function with declared objects as arguments
 */
 
+var str = {name: "Steven", age: 54};
 
+var str2 = {name: "Tamir", age: 54};
+
+var objH = {name: "John", age: 7};
+
+var objG = {name: "Lenny", age: 16};
+
+function isMatch(obj1, obj2) {
+
+	obj1Keys = Object.keys(str);
+		
+	obj2Keys = Object.keys(str2);
+	
+	var matchFound = 0;
+	
+	for (var i = 0; i < obj1Keys.length; i++) {
+		for (var k = 0; k < obj2Keys.length; k++) {
+			console.log(obj1[obj1Keys[i]]);
+			console.log(obj2[obj2Keys[k]]);
+			if (obj1[obj1Keys[i]] == obj2[obj2Keys[k]]) {
+				matchFound = 1;
+			} else {
+				matchFound = 0;
+			}
+		}
+	}
+	
+	if (matchFound == 1) {
+			return true;
+		} else {
+			return false;
+		}
+
+}
+
+console.log(isMatch(str, str2));
+console.log(isMatch(objH, objG));
 
 
 
