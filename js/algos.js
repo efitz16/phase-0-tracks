@@ -132,5 +132,35 @@ Pseudocode:
 	- pass array into Release 0 longest phrase function
 */
 
+console.log("Release 2:");
 
+function randomArray(len) {
+	
+	arr = [];
+	
+	alphabet = "abcedfghijklmnopqrstuvwxyz";
+	
+	for (var i = 0; i < len; i ++) {
+		
+		word_i = "";
+		
+		for (var k = 0; k < (Math.floor(Math.random() * 10) + 1); k++) { // Random generator here calculates length of word
+			word_i = word_i + alphabet[Math.floor(Math.random() * 26)]; // calculates random letter of the alphabet
+		}
+		
+		arr.push(word_i);
+	}
+	
+	return arr;
+}
 
+for (var j = 0; j < 10; j ++) {
+
+	arr = [];
+
+	arr = randomArray(Math.floor(Math.random() * 11) + 1); // calculates randomly length of array (i.e. how many words in the array)--can have at most 11 words and at least 1
+	
+	console.log(arr);
+	
+	console.log(longestPhrase(arr));
+}
