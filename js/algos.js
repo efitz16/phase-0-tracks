@@ -5,7 +5,7 @@
 
 /*
 - declare some arrays with strings of words and phrases of varying lengths
-- function that finds longest phrase--takes array as argument
+- function that finds longest phrase--takes array as parameter
 	- WHILE the array length is greater than one
 		- set count variable to zero
 		- IF the length og the string at array at index count greater than the length of the string at the next indexin the array
@@ -14,6 +14,60 @@
 			- remove the string at count because it's shorter
 		- increase count by one
 - return the array
-- driver code calling function on declared arrays
+- driver code calling function with declared arrays as arguments
 */
+
+var arr1 = ["long phrase","longest phrase","longer phrase"];
+
+var arr2 = ["the cat in the hat", "one fish two first three fish blue fish", "green eggs and ham", "Sam I am"];
+
+var arr3 = ["To be or not to be", "whether tis nobler in the mind to bear the slings and arrows of outrageous fortune", "or to take arms against a sea of troubles", "what a piece of work is a man", "I have no spurs to prick the sides of my intent"];
+
+function longestPhrase(arr) {
+	
+	while (arr.length > 1) {
+		var i = 0;
+		
+		if (arr[i].length > arr[i+1].length) {
+				longestPhrase(arr.splice(i+1, 1));
+			}
+		else {
+				longestPhrase(arr.splice(i,1));
+			}
+		
+		i += 1;
+	}
+	
+	return arr;
+}
+
+console.log(longestPhrase(arr1));
+console.log(longestPhrase(arr2));
+console.log(longestPhrase(arr3));
+
+
+// Release 1
+
+/*
+- declare objects with identifier names and values
+- function to see if match-- takes two objects as parameters (2 parameters)
+	- variable that checks if match found--set to 0
+	- get array of identifier names using special code for objects one and two
+	- two FOR loops
+		- first: works with object want to compare against
+		- second: works with object loop through each, comparing against set index of first
+		- when loop through all of second, then increase index of first by one
+		- use comparison operator on each value
+		- IF find match, change value if match found variable
+			- ELSE match found variable stays at zero
+	- IF match found variable = 1
+		- return true
+	- ELSE
+		- return false
+- call function with declared objects as arguments
+*/
+
+
+
+
 
