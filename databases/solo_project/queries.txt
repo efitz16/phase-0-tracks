@@ -1,0 +1,25 @@
+Challenge 8.3, Release 2
+
+> denotes it's a command
+
+1. Display the information in one table (either table is fine).
+
+> SELECT * FROM students;
+
+1|Linda Smith|8|false|2
+2|Jack Lyons|8|true|3
+3|Tamir Daniels|8|true|2
+4|Daniel Vacca|9|false|1
+5|Molly Jovel|8|true|1
+6|Matthew Reed|9|false|1
+7|Jackie Rocchio|9|true|3
+8|Lily Adison|8|false|2
+9|Jimmy Herbert|9|false|3
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+> 
+
+3. Display the information in both tables using one query.
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+5. Delete an item that meets some condition (you can choose a condition that makes sense). 
