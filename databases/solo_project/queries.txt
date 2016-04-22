@@ -18,8 +18,63 @@ Challenge 8.3, Release 2
 
 2. Update an item that meets some condition (you can choose a condition that makes sense).
 
-> 
+> UPDATE students SET age=9 WHERE name="Tamir Daniels";
+
+before command:
+1|Linda Smith|8|false|2
+2|Jack Lyons|8|true|3
+3|Tamir Daniels|8|true|2
+4|Daniel Vacca|9|false|1
+5|Molly Jovel|8|true|1
+6|Matthew Reed|9|false|1
+7|Jackie Rocchio|9|true|3
+8|Lily Adison|8|false|2
+9|Jimmy Herbert|9|false|3
+
+after command:
+1|Linda Smith|8|false|2
+2|Jack Lyons|8|true|3
+3|Tamir Daniels|9|true|2
+4|Daniel Vacca|9|false|1
+5|Molly Jovel|8|true|1
+6|Matthew Reed|9|false|1
+7|Jackie Rocchio|9|true|3
+8|Lily Adison|8|false|2
+9|Jimmy Herbert|9|false|3
 
 3. Display the information in both tables using one query.
+
+> SELECT * FROM students, teachers WHERE students.teacher_id = teachers.id;
+
+1|Linda Smith|8|false|2|2|Jennifer Reardon|23|false
+2|Jack Lyons|8|true|3|3|Tim Vasile|31|true
+3|Tamir Daniels|9|true|2|2|Jennifer Reardon|23|false
+4|Daniel Vacca|9|false|1|1|Lisa Newman|34|true
+5|Molly Jovel|8|true|1|1|Lisa Newman|34|true
+6|Matthew Reed|9|false|1|1|Lisa Newman|34|true
+7|Jackie Rocchio|9|true|3|3|Tim Vasile|31|true
+8|Lily Adison|8|false|2|2|Jennifer Reardon|23|false
+9|Jimmy Herbert|9|false|3|3|Tim Vasile|31|true
+
 4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+> SELECT teachers.name, students.name FROM students JOIN teachers ON students.teacher_id = teachers.id WHERE teacher_id=3;
+
+Tim Vasile|Jack Lyons
+Tim Vasile|Jackie Rocchio
+Tim Vasile|Jimmy Herbert
+
 5. Delete an item that meets some condition (you can choose a condition that makes sense). 
+
+Matthew Reed moved:
+
+> DELETE FROM students WHERE name="Matthew Reed";
+
+1|Linda Smith|8|false|2
+2|Jack Lyons|8|true|3
+3|Tamir Daniels|9|true|2
+4|Daniel Vacca|9|false|1
+5|Molly Jovel|8|true|1
+7|Jackie Rocchio|9|true|3
+8|Lily Adison|8|false|2
+9|Jimmy Herbert|9|false|3
