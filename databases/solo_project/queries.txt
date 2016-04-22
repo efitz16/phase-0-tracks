@@ -1,0 +1,143 @@
+Challenge 8.3, Release 2
+
+> denotes it's a command
+
+1. Display the information in one table (either table is fine).
+
+> SELECT * FROM students;
+
+1|Linda Smith|8|false|2
+2|Jack Lyons|8|true|3
+3|Tamir Daniels|8|true|2
+4|Daniel Vacca|9|false|1
+5|Molly Jovel|8|true|1
+6|Matthew Reed|9|false|1
+7|Jackie Rocchio|9|true|3
+8|Lily Adison|8|false|2
+9|Jimmy Herbert|9|false|3
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+> UPDATE students SET age=9 WHERE name="Tamir Daniels";
+
+before command:
+1|Linda Smith|8|false|2
+2|Jack Lyons|8|true|3
+3|Tamir Daniels|8|true|2
+4|Daniel Vacca|9|false|1
+5|Molly Jovel|8|true|1
+6|Matthew Reed|9|false|1
+7|Jackie Rocchio|9|true|3
+8|Lily Adison|8|false|2
+9|Jimmy Herbert|9|false|3
+
+after command:
+1|Linda Smith|8|false|2
+2|Jack Lyons|8|true|3
+3|Tamir Daniels|9|true|2
+4|Daniel Vacca|9|false|1
+5|Molly Jovel|8|true|1
+6|Matthew Reed|9|false|1
+7|Jackie Rocchio|9|true|3
+8|Lily Adison|8|false|2
+9|Jimmy Herbert|9|false|3
+
+3. Display the information in both tables using one query.
+
+> SELECT * FROM students, teachers WHERE students.teacher_id = teachers.id;
+
+1|Linda Smith|8|false|2|2|Jennifer Reardon|23|false
+2|Jack Lyons|8|true|3|3|Tim Vasile|31|true
+3|Tamir Daniels|9|true|2|2|Jennifer Reardon|23|false
+4|Daniel Vacca|9|false|1|1|Lisa Newman|34|true
+5|Molly Jovel|8|true|1|1|Lisa Newman|34|true
+6|Matthew Reed|9|false|1|1|Lisa Newman|34|true
+7|Jackie Rocchio|9|true|3|3|Tim Vasile|31|true
+8|Lily Adison|8|false|2|2|Jennifer Reardon|23|false
+9|Jimmy Herbert|9|false|3|3|Tim Vasile|31|true
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+> SELECT teachers.name, students.name FROM students JOIN teachers ON students.teacher_id = teachers.id WHERE teacher_id=3;
+
+Tim Vasile|Jack Lyons
+Tim Vasile|Jackie Rocchio
+Tim Vasile|Jimmy Herbert
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense). 
+
+Matthew Reed moved:
+
+> DELETE FROM students WHERE name="Matthew Reed";
+
+1|Linda Smith|8|false|2
+2|Jack Lyons|8|true|3
+3|Tamir Daniels|9|true|2
+4|Daniel Vacca|9|false|1
+5|Molly Jovel|8|true|1
+7|Jackie Rocchio|9|true|3
+8|Lily Adison|8|false|2
+9|Jimmy Herbert|9|false|3
+
+
+Challenge 8.3, Release 3
+
+CROSS JOIN:
+
+> SELECT * FROM students CROSS JOIN teachers; 
+(I recognize that this doesn't match up students with their respective teachers, just each student with every row in the teachers table)
+
+1|Linda Smith|8|false|2|1|Lisa Newman|34|true
+1|Linda Smith|8|false|2|2|Jennifer Reardon|23|false
+1|Linda Smith|8|false|2|3|Tim Vasile|31|true
+2|Jack Lyons|8|true|3|1|Lisa Newman|34|true
+2|Jack Lyons|8|true|3|2|Jennifer Reardon|23|false
+2|Jack Lyons|8|true|3|3|Tim Vasile|31|true
+3|Tamir Daniels|9|true|2|1|Lisa Newman|34|true
+3|Tamir Daniels|9|true|2|2|Jennifer Reardon|23|false
+3|Tamir Daniels|9|true|2|3|Tim Vasile|31|true
+4|Daniel Vacca|9|false|1|1|Lisa Newman|34|true
+4|Daniel Vacca|9|false|1|2|Jennifer Reardon|23|false
+4|Daniel Vacca|9|false|1|3|Tim Vasile|31|true
+5|Molly Jovel|8|true|1|1|Lisa Newman|34|true
+5|Molly Jovel|8|true|1|2|Jennifer Reardon|23|false
+5|Molly Jovel|8|true|1|3|Tim Vasile|31|true
+7|Jackie Rocchio|9|true|3|1|Lisa Newman|34|true
+7|Jackie Rocchio|9|true|3|2|Jennifer Reardon|23|false
+7|Jackie Rocchio|9|true|3|3|Tim Vasile|31|true
+8|Lily Adison|8|false|2|1|Lisa Newman|34|true
+8|Lily Adison|8|false|2|2|Jennifer Reardon|23|false
+8|Lily Adison|8|false|2|3|Tim Vasile|31|true
+9|Jimmy Herbert|9|false|3|1|Lisa Newman|34|true
+9|Jimmy Herbert|9|false|3|2|Jennifer Reardon|23|false
+9|Jimmy Herbert|9|false|3|3|Tim Vasile|31|true
+
+
+LEFT OUTER JOIN:
+
+> SELECT students.name, teachers.name FROM students LEFT OUTER JOIN teachers on students.teacher_id = teachers.id;
+
+Linda Smith|Jennifer Reardon
+Jack Lyons|Tim Vasile
+Tamir Daniels|Jennifer Reardon
+Daniel Vacca|Lisa Newman
+Molly Jovel|Lisa Newman
+Jackie Rocchio|Tim Vasile
+Lily Adison|Jennifer Reardon
+Jimmy Herbert|Tim Vasile
+
+INNER JOIN:
+
+> SELECT students.name, teachers.name
+   ...> FROM students
+   ...> INNER JOIN teachers
+   ...> ON students.teacher_id = teachers.id;
+
+Linda Smith|Jennifer Reardon
+Jack Lyons|Tim Vasile
+Tamir Daniels|Jennifer Reardon
+Daniel Vacca|Lisa Newman
+Molly Jovel|Lisa Newman
+Jackie Rocchio|Tim Vasile
+Lily Adison|Jennifer Reardon
+Jimmy Herbert|Tim Vasile
