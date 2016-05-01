@@ -61,19 +61,13 @@ get '/great_job' do
   
 end
 
-get '/:number_1/add/:number_2' do
-  #num_1 = params[:number_1].to_i
+get '/:number_1/plus/:number_2' do
+  num_1 = params[:number_1].to_i
 
-  #p num_1
+  num_2 = params[:number_2].to_i
 
-  #num_2 = params[:number_2].to_i
+  result = num_1 + num_2
 
-  #result = num_1 + num_2
-
-  #{}"The result is #{result}."
-
-  #result = params[:number_1].to_i + params[:number_2].to_i
-
-  "i work"
+  "The result of #{params[:number_1]} plus #{params[:number_2]} is #{result}."
 
 end
