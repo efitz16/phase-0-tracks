@@ -25,3 +25,18 @@ start: 12:54 pm
 * JQuery is a JS library, simplifies JS programming
 
 * thus access JQuery via JavaScript
+
+end: 1:04 pm
+
+start: 5:45 pm
+
+* jQ -- library/add-ons to JS
+
+* jQuery can access & modify HTML through interaction w/DOM
+
+* review: DOM is hierarchical order of every HTML element on page--reflects document's order
+
+* wrap HTML & CSS elements in quotes (just wrap everything,including . or # of CSS)
+
+* syntax: $('element').someAction
+
