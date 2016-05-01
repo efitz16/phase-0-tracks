@@ -25,3 +25,33 @@ post '/students' do
 end
 
 # add static resources
+
+get '/students/SDcampus' do
+	@students = db.execute("SELECT * FROM students WHERE campus='SD'")
+	@city_name = "San Diego"
+	erb :list_campus
+end
+
+get '/students/CHIcampus' do
+	@students = db.execute("SELECT * FROM students WHERE campus='CHI'")
+	@city_name = "Chicago"
+	erb :list_campus
+end
+
+get '/students/NYCcampus' do
+	@students = db.execute("SELECT * FROM students WHERE campus='NYC'")
+	@city_name = "New York"
+	erb :list_campus
+end
+
+get '/students/SFcampus' do
+	@students = db.execute("SELECT * FROM students WHERE campus='SF'")
+	@city_name = "San Francisco"
+	erb :list_campus
+end
+
+get '/students/SEAcampus' do
+	@students = db.execute("SELECT * FROM students WHERE campus='SEA'")
+	@city_name = "Seattle"
+	erb :list_campus
+end

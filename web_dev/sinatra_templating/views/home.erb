@@ -7,9 +7,14 @@
   <h1>Student Management System</h1>
   <p>Welcome to the student management system.</p>
   <p>Click <a href="students/new">here</a> to create a new student.</p>
+  <p>Click <a href="students/SDcampus">here</a> to view all students from San Diego.</p>
+  <p>Click <a href="students/CHIcampus">here</a> to view all students from Chicago.</p>
+  <p>Click <a href="students/NYCcampus">here</a> to view all students from New York.</p>
+  <p>Click <a href="students/SFcampus">here</a> to view all students from San Francisco.</p>
+  <p>Click <a href="students/SEAcampus">here</a> to view all students from Seattle.</p>
   <ul>
     <% @students.each do |student| %>
-      <li><%= student['name'] %>, <%= student['age'] %></li>
+      <li><%= student['name'] %>, <%= student['age'] %>, <%= student['campus'] %></li>
     <% end %>
   </ul>
 </body>
