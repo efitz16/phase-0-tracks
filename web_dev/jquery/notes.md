@@ -17,3 +17,11 @@ Here's how I plan on tackling jQuery:
 * Do the challenge over a few days so as to not cram all the information in at once, but allow it to sink in over a period of time
 
 * Adjust my learning strategy based on how proficient I become; the more I learn about the topic, the better I'll probably be at researching it
+
+### Release 1: Study notes
+
+start: 12:54 pm
+
+* JQuery is a JS library, simplifies JS programming
+
+* thus access JQuery via JavaScript
