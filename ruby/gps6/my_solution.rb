@@ -28,21 +28,20 @@ class VirusPredictor
 # Using IF/ELSE checks state's density, and thus predicts how many people will die (higher density equals more deaths) by multiplying population by density percentage ****
   def predicted_deaths
     # predicted deaths is solely based on population density
-    if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
-    elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
-    elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
-    elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
-    else
-      number_of_deaths = (@population * 0.05).floor
-    end
-
-    print "#{@state} will lose #{number_of_deaths} people in this outbreak"
-
+    death_toll = (@population * death_multiplier).floor
+    puts "#{@state} will lose #{death_toll} people in this outbreak"
   end
+
+def death_multiplier
+  case @population_density
+    when 0...50 then 0.05
+    when 50...100 then 0.1
+    when 100...150 then 0.2
+    when 150...200 then 0.3
+    else 0.4
+    end
+  end
+end
 
 # Using population density, predicts how quickly virus will spread across state
   def speed_of_spread #in months
@@ -65,8 +64,6 @@ class VirusPredictor
     puts " and it will spread across the state in #{speed} months.\n\n"
 
   end
-
-end
 
 #=======================================================================
 
