@@ -25,3 +25,25 @@ start: 12:54 pm
 * JQuery is a JS library, simplifies JS programming
 
 * thus access JQuery via JavaScript
+
+end: 1:04 pm
+
+start: 5:45 pm
+
+* jQ -- library/add-ons to JS
+
+* jQuery can access & modify HTML through interaction w/DOM
+
+* review: DOM is hierarchical order of every HTML element on page--reflects document's order
+
+* wrap HTML & CSS elements in quotes (just wrap everything,including . or # of CSS)
+
+* syntax: $('element').someAction
+
+* document doesn't go in quotes
+
+end: 10:38 pm
+
+What was most effective?
+
+Probably the most effective (and most ostensibly useless) strategy is to, as one of my guides said, "get your first 10000 hours in." Although I seemed lost at first, the more I did, the less lost I felt. In order to get enough information where you feel like you're learning something, either take notes and/or do a tutorial.
